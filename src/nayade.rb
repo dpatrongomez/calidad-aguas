@@ -24,7 +24,7 @@ require 'cgi'
 require 'csv'
 require 'yaml'
 
-NAYADE_URL = "http://nayade.msc.es/Splayas/ciudadano/ciudadanoVerZonaAction.do"
+NAYADE_URL = "https://nayadeciudadano.sanidad.gob.es/Splayas/ciudadano/ciudadanoVerZonaAction.do"
 MAX_PLAYAS = 1990
 
 @count = 0
