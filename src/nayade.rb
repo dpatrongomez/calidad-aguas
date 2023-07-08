@@ -29,6 +29,7 @@ MAX_PLAYAS = 1990
 
 @count = 0
 @atribucion = {}
+@count_mutex = Mutex.new
 
 class NayadeError < StandardError
 end
@@ -136,7 +137,7 @@ def procesar_playas(inicio, fin)
     cad_hist << res[1]
     cad_log << res[2]
 
-    Thread.exclusive { @count+=1 }
+    @count_mutex.synchronize { @count += 1 }
   end
 
   return [cad_ult, cad_hist, cad_log]
